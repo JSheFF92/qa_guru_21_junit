@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'guru.qa'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+    testImplementation 'com.codeborne:selenide:6.16.0'
+}
+
+test {
+    String tags = System.getProperty("tags") != null ? System.getProperty("tags") : 'smoke'
+    useJUnitPlatform {
+        includeTags tags
+    }
+}
