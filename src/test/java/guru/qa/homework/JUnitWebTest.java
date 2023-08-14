@@ -71,8 +71,8 @@ public class JUnitWebTest {
 
     static Stream<Arguments> selenideJUnit5SiteTest() {
         return Stream.of(
-                Arguments.of(Add.Selenide, List.of("Product", "Solutions", "Open Source", "Pricing")),
-                Arguments.of(Add.JUnit5, List.of("Product", "Solutions", "Open Source", "Pricing"))
+                Arguments.of(Add.SELENIDE, List.of("Product", "Solutions", "Open Source", "Pricing")),
+                Arguments.of(Add.JUNIT5, List.of("Product", "Solutions", "Open Source", "Pricing"))
         );
     }
     @Tags({
